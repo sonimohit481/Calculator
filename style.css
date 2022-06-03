@@ -1,0 +1,59 @@
+* {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: teal;
+    margin-top: 60px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#box1>input {
+    width: 88%;
+    padding: 5px 20px 5px 0px;
+    margin: 10px auto;
+    display: block;
+    text-align: right;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#box2 {
+    display: grid;
+    margin: auto;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#clr {
+    background: red;
+    color: white;
+}
+
+.op {
+    background: #000;
+    color: white;
+}
