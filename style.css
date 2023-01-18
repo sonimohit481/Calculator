@@ -1,59 +1,95 @@
-* {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: beige;
 }
 
-h1 {
+.headding {
     text-align: center;
-    font-size: 60px;
-    color: teal;
-    margin-top: 60px;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-#main {
+.calculater {
+    min-width: 300px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(226, 238, 248);
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin: auto;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-#box1>input {
-    width: 88%;
-    padding: 5px 20px 5px 0px;
-    margin: 10px auto;
-    display: block;
-    text-align: right;
-    font-size: 30px;
-    border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+#display {
+    display: flex;
 }
 
-#box2 {
+#display input {
+    margin: 10px;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+}
+
+#buttons {
     display: grid;
-    margin: auto;
-    justify-content: space-evenly;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 24px;
+    margin: 10px auto;
+}
+
+#clear {
+    background-color: black;
+    color: white;
+}
+
+.operator {
+    background-color: rgb(220, 19, 19);
+    color: rgb(255, 255, 255);
+}
+
+#equal {
+    background-color: rgb(6, 89, 145);
+    color: white;
 }
 
 button {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
-    cursor: pointer;
+    font-size: 24px;
+    font-weight: 900;
+    background-color: white;
 }
 
-#clr {
-    background: red;
-    color: white;
+@media (min-width:425px) {
+
+    .calculater {
+        width: 400px;
+    }
+
+    button {
+        width: 70px;
+        height: 60px;
+    }
+
 }
 
-.op {
-    background: #000;
-    color: white;
+@media (min-width:768px) {
+
+    .calculater {
+        width: 700px;
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+    }
+
 }

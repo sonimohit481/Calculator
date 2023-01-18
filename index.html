@@ -6,36 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="./images/calculator.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
     <title>Calculater</title>
 </head>
-<style>
-
-</style>
 
 <body>
-    <h1>Basic Calculater</h1>
-    <div id="main">
-        <div id="box1">
-            <input id="input" autocomplete="off" placeholder="0 " />
+    <div class="headding">
+        <h1>Basic Calculater</h1>
+    </div>
+    <div class="calculater">
+        <div id="display">
+            <input id="input" autocomplete="off" placeholder="0" disabled />
         </div>
-        <div id="box2">
-            <button class="no" onclick="perform('1')">1</button>
-            <button class="no" onclick="perform('2')">2</button>
-            <button class="no" onclick="perform('3')">3</button>
-            <button class="op" onclick="perform('+')">+</button>
-            <button class="no" onclick="perform('4')">4</button>
-            <button class="no" onclick="perform('5')">5</button>
-            <button class="no" onclick="perform('6')">6</button>
-            <button class="op" onclick="perform('-')">-</button>
-            <button class="no" onclick="perform('7')">7</button>
-            <button class="no" onclick="perform('8')">8</button>
-            <button class="no" onclick="perform('9')">9</button>
-            <button class="op" onclick="perform('*')">*</button>
-            <button id="clr" onclick="clean('')">C</button>
-            <button class="no" onclick="perform('0')">0</button>
-            <button class="op" onclick="result()">=</button>
-            <button class="op" onclick="perform('/')">/</button>
+        <div id="buttons">
+            <button class="number" onclick="perform('1')">1</button>
+            <button class="number" onclick="perform('2')">2</button>
+            <button class="number" onclick="perform('3')">3</button>
+            <button class="operator" onclick="perform('+')">+</button>
+            <button class="number" onclick="perform('4')">4</button>
+            <button class="number" onclick="perform('5')">5</button>
+            <button class="number" onclick="perform('6')">6</button>
+            <button class="operator" onclick="perform('-')">-</button>
+            <button class="number" onclick="perform('7')">7</button>
+            <button class="number" onclick="perform('8')">8</button>
+            <button class="number" onclick="perform('9')">9</button>
+            <button class="operator" onclick="perform('*')">*</button>
+            <button id="clear" onclick="clean('')">C</button>
+            <button class="number" onclick="perform('0')">0</button>
+            <button id="equal" onclick="result()">=</button>
+            <button class="operator" onclick="perform('/')">/</button>
         </div>
     </div>
 </body>
