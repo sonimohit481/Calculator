@@ -19,27 +19,26 @@
             <input id="input" autocomplete="off" placeholder="0" disabled />
         </div>
         <div id="buttons">
-            <button class="number" onclick="perform('1')">1</button>
-            <button class="number" onclick="perform('2')">2</button>
-            <button class="number" onclick="perform('3')">3</button>
-            <button class="operator" onclick="perform('+')">+</button>
-            <button class="number" onclick="perform('4')">4</button>
-            <button class="number" onclick="perform('5')">5</button>
-            <button class="number" onclick="perform('6')">6</button>
-            <button class="operator" onclick="perform('-')">-</button>
-            <button class="number" onclick="perform('7')">7</button>
-            <button class="number" onclick="perform('8')">8</button>
-            <button class="number" onclick="perform('9')">9</button>
-            <button class="operator" onclick="perform('*')">*</button>
-            <button id="clear" onclick="clean('')">C</button>
+            <button class="number" onclick="Perform('1')">1</button>
+            <button class="number" onclick="Perform('2')">2</button>
+            <button class="number" onclick="Perform('3')">3</button>
+            <button class="operator" onclick="Perform('+')">+</button>
+            <button class="number" onclick="Perform('4')">4</button>
+            <button class="number" onclick="Perform('5')">5</button>
+            <button class="number" onclick="Perform('6')">6</button>
+            <button class="operator" onclick="Perform('-')">-</button>
+            <button class="number" onclick="Perform('7')">7</button>
+            <button class="number" onclick="Perform('8')">8</button>
+            <button class="number" onclick="Perform('9')">9</button>
+            <button class="operator" onclick="Perform('*')">*</button>
+            <button id="clear" onclick="ClearInput('')">C</button>
             <button class="number" onclick="perform('0')">0</button>
-            <button id="equal" onclick="result()">=</button>
-            <button class="operator" onclick="perform('/')">/</button>
+            <button id="equal" onclick="Result()">=</button>
+            <button class="operator" onclick="Perform('/')">/</button>
         </div>
     </div>
 </body>
 <script src="index.js">
-
 </script>
 
 </html>

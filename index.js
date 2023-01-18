@@ -1,62 +1,57 @@
-var input = "";
-var result;
-show(input);
-// for collecting values
-function perform(value) {
-    document.querySelector("#input").focus();
-    input = input + value;
-    show(input);
+let input = ""; //declearing variavle for input
+let result; // for end result
+DisplayInput(input);
+//  perform function call on every button call
+function Perform(value) {
+  input = input + value;
+  DisplayInput(input);
 }
-
-//  for showing
-function show(input) {
-    document.querySelector("#input").value = input;
+// to display data on input box
+function DisplayInput(input) {
+  document.querySelector("#input").value = input;
 }
-
-//  just for clearing the input field
-function clean(C) {
-    document.querySelector("#input").value = C;
+//  for cleaearing the data in input box
+function ClearInput(C) {
+  document.querySelector("#input").value = C;
 }
-
-// for result || actual calculation
-function result() {
-    input = document.querySelector("#input").value;
-    var array = input.split("");
-    var No = [];
-    var OP = [];
-    var str = "";
-
-    for (var i = 0; i < array.length; i++) {
-        if (Number(array[i]) >= 0 && Number(array[i]) <= 9) {
-            str = str + array[i];
-        } else if (array[i] == "+" || array[i] == "-" || array[i] == "*" || array[i] == "/") 
-        {
-            No.push(str);
-            str = "";
-            OP.push(array[i]);
-        } else {
-            alert("Invalid Operator");
-        }
+// for end result
+function Result() {
+  input = document.querySelector("#input").value;
+  let array = input.split("");
+  let number = [];
+  let operator = [];
+  let digitValue = "";
+  // filtering operator and digits
+  for (let i = 0; i < array.length; i++) {
+    if (Number(array[i]) >= 0 && Number(array[i]) <= 9) {
+      digitValue = digitValue + array[i];
+    } else if (
+      array[i] == "+" ||
+      array[i] == "-" ||
+      array[i] == "*" ||
+      array[i] == "/"
+    ) {
+      number.push(digitValue);
+      digitValue = "";
+      operator.push(array[i]);
+    } else {
+      alert("Invalid operatorerator");
     }
-    // for pushing last value of str
-    No.push(str);
-    var result = Number(No[0]);
-
-    for (var i = 0; i < OP.length; i++) {
-        if (OP[i] == "+") {
-            result = result + Number(No[i + 1]);
-        } else if (OP[i] == "-") {
-            result = result - Number(No[i + 1]);
-        } else if (OP[i] == "*") {
-            result = result * Number(No[i + 1]);
-        } else if (OP[i] == "/") {
-            result = result / Number(No[i + 1]);
-        }
+  }
+  number.push(digitValue);
+  var result = Number(number[0]);
+  //   performing actual thing
+  for (var i = 0; i < operator.length; i++) {
+    if (operator[i] == "+") {
+      result = result + Number(number[i + 1]);
+    } else if (operator[i] == "-") {
+      result = result - Number(number[i + 1]);
+    } else if (operator[i] == "*") {
+      result = result * Number(number[i + 1]);
+    } else if (operator[i] == "/") {
+      result = result / Number(number[i + 1]);
     }
-
-    input = result;
-
-    show(input);
-
-    document.querySelector("#input").focus();
+  }
+  //   printing result
+  DisplayInput(result);
 }
